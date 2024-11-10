@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reservation - Restaurant Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        
+        header {
+            background-color: #F4C430;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%; 
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .reservation-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .reservation-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .reservation-form input,
+        .reservation-form select,
+        .reservation-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .reservation-form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .reservation-form button {
+            background-color: #F4C430;
+            color: black;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .reservation-form button:hover {
+            background-color: #e1a500;
+        }
+
+        .confirmation-message {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+     
+        footer {
+            background-color: #F4C430;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .social-media a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="logo.avif" alt="Restaurant Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <main>
+        <h1>Make a Reservation</h1>
+
+       
+        <div class="reservation-form">
+            <form id="reservationForm">
+                <label for="reservationDate">Date of Reservation</label>
+                <input type="date" id="reservationDate" name="reservationDate" required>
+
+                <label for="reservationTime">Time of Reservation</label>
+                <input type="time" id="reservationTime" name="reservationTime" required>
+
+                <label for="numGuests">Number of Guests</label>
+                <select id="numGuests" name="numGuests" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Contact Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="specialRequests">Special Requests (Optional)</label>
+                <textarea id="specialRequests" name="specialRequests"></textarea>
+
+                <button type="submit">Reserve Table</button>
+            </form>
+
+         
+            <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+                Your reservation was applied!.
+            </div>
+        </div>
+    </main>
+
+ 
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" title="Visit us on Facebook">
+                <i class="fab fa-facebook" style="font-size: 24px; color: #333; margin: 0 10px;"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" title="Visit us on Instagram">
+                <i class="fab fa-instagram" style="font-size: 24px; color: #333; margin: 0 10px;"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" title="Visit us on Twitter">
+                <i class="fab fa-twitter" style="font-size: 24px; color: #333; margin: 0 10px;"></i>
+            </a>
+        </div>
+        <p>Visit us at "Rruga Skenderbeu"</p>
+        <p>Hours of Operation: [Mon-Sun: 10 AM - 10 PM]</p>
+        <p>Contact Us: <a href="tel:+38345467812">045467812</a></p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+       
+        document.getElementById('reservationForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            
+            
+            document.getElementById('confirmationMessage').style.display = 'block';
+
+            
+            event.target.reset();
+        });
+    });
+    </script>
+</body>
+
+</html>

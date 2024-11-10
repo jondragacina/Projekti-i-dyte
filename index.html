@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurant Name</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #F4C430;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; 
+}
+
+header .logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+header .logo h1 {
+    margin-left: 15px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+button {
+    background-color: #F4C430;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e5b022;
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; 
+}
+
+.hero img {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.05);
+}
+
+.about {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    color: #F4C430;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.highlights {
+    margin-top: 40px;
+}
+
+.highlights h2 {
+    text-align: center;
+    color: #F4C430;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.highlight-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.highlight {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+    transform: scale(1.05);
+}
+
+.highlight h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 16px;
+    color: #555;
+}
+
+footer {
+    background-color: #F4C430;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 15px;
+    }
+
+    .hero img {
+        width: 100%; 
+        margin-bottom: 15px;
+    }
+
+    .highlight-container {
+        gap: 10px;
+    }
+
+    .highlight {
+        flex: 1 1 100%;
+    }
+
+    footer .social-media a {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about p, .highlight p {
+        font-size: 14px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .highlight {
+        padding: 15px;
+    }
+
+    .highlight h3 {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+   
+    <header>
+        <div class="logo">
+            <img src="logo.avif" alt="Restaurant Logo">
+            <h1>TasteLab</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        
+        <section class="hero">
+            <img src="restaurant-interior.jpg" alt="Interior of Restaurant">
+            <img src="popular dish.jpg" alt="Popular Dish">
+            <img src="event.jpeg" alt="Restaurant Event">
+        </section>
+
+        
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Welcome to <strong>TasteLab</strong>, where culinary passion meets hospitality. Established in <strong>2008</strong>, we offer a unique dining experience with a cozy atmosphere. Enjoy delicious dishes crafted from the finest ingredients, prepared with love and care by our talented chefs. Join us to explore a world of flavors and impeccable service!</p>
+        </section>
+
+        
+        <section class="highlights">
+            <h2>Our Highlights</h2>
+            <div class="highlight-container">
+                <div class="highlight">
+                    <h3>Featured Dishes</h3>
+                    <p>Try our signature dishes like the <strong>Chicken noodle</strong> and <strong>Chicken Rice</strong>, perfect for every occasion!</p>
+                </div>
+                <div class="highlight">
+                    <h3>Customer Testimonials</h3>
+                    <p>"A truly memorable dining experience! The food was exceptional and the service was top-notch." - <strong>Jane Doe</strong></p>
+                </div>
+                <div class="highlight">
+                    <h3>Special Offers</h3>
+                    <p>Don't miss our 2-for-1 appetizer deal available all month long! Visit us soon.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+ 
+   <footer>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank" title="Visit us on Facebook">
+            <i class="fab fa-facebook" style="font-size: 24px; color: #333; margin: 0 10px;"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" title="Visit us on Instagram">
+            <i class="fab fa-instagram" style="font-size: 24px; color: #333; margin: 0 10px;"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" title="Visit us on Twitter">
+            <i class="fab fa-twitter" style="font-size: 24px; color: #333; margin: 0 10px;"></i>
+        </a>
+    </div>
+    <p>Visit us at "Rruga Skenderbeu"</p>
+    <p>Hours of Operation: [Mon-Sun: 10 AM - 10 PM]</p>
+    <p>Contact Us: <a href="tel:+38345467812">045467812</a></p>
+</footer>
+
+</body>
+
+</html>
+
